@@ -2,36 +2,35 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { View, Button, Text } from '@tarojs/components'
 
-import { add, minus, asyncAdd } from "../../store/actions/counter";
+import { add, minus, asyncAdd } from '../../store/actions/counter'
 
 import './index.scss'
-
 
 @connect(({ counter }) => ({
   counter
 }), (dispatch) => ({
-  add () {
+  add() {
     dispatch(add())
   },
-  dec () {
+  dec() {
     dispatch(minus())
   },
-  asyncAdd () {
+  asyncAdd() {
     dispatch(asyncAdd())
   }
 }))
 class Index extends Component {
-  componentWillReceiveProps (nextProps) {
+  componentWillReceiveProps(nextProps) {
     console.log(this.props, nextProps)
   }
 
-  componentWillUnmount () { }
+  componentWillUnmount() { }
 
-  componentDidShow () { }
+  componentDidShow() { }
 
-  componentDidHide () { }
+  componentDidHide() { }
 
-  render () {
+  render() {
     return (
       <View className='index'>
         <Button className='add_btn' onClick={this.props.add}>+</Button>

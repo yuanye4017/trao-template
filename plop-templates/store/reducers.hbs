@@ -1,0 +1,13 @@
+import initState from '../state/{{ name }}'
+import { DEMO } from '../constants/{{ name }}'
+
+export default function counter(state = initState, action) {
+  switch (action.type) {
+    case DEMO:
+      return {
+        ...state
+      }
+    default:
+      return state
+  }
+}

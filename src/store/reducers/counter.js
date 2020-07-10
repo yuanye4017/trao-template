@@ -1,5 +1,5 @@
-import initState from "../state/counter";
-import { ADD, MINUS } from "../constants/counter";
+import initState from '../state/counter'
+import { ADD, MINUS } from '../constants/counter'
 
 export default function counter(state = initState, action) {
   switch (action.type) {
@@ -7,13 +7,13 @@ export default function counter(state = initState, action) {
       return {
         ...state,
         num: state.num + 1
-      };
+      }
     case MINUS:
       return {
         ...state,
         num: state.num - 1
-      };
+      }
     default:
-      return state;
+      return state
   }
 }

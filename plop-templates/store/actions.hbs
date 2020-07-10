@@ -1,0 +1,17 @@
+import { DEMO } from '../constants/{{ name }}'
+
+export const demoFn = () => {
+  return {
+    type: DEMO,
+    payLoad: {}
+  }
+}
+
+// 异步的action
+export function asyncFn() {
+  return dispatch => {
+    setTimeout(() => {
+      dispatch(demoFn())
+    }, 2000)
+  }
+}

@@ -1,5 +1,5 @@
 export default {
-  userName: "",
-  avatorUrl: "",
-  token: ""
-};
+  userName: '',
+  avatorUrl: '',
+  token: ''
+}
