@@ -50,6 +50,7 @@ const config = {
   h5: {
     publicPath: '/',
     staticDirectory: 'static',
+    esnextModules: ['taro-ui'],
     postcss: {
       autoprefixer: {
         enable: true,
@@ -67,7 +68,7 @@ const config = {
   }
 }
 
-export default function (merge) {
+export default function(merge) {
   if (process.env.NODE_ENV === 'development') {
     return merge({}, config, require('./dev'))
   }

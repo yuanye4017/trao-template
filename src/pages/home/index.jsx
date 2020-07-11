@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { View, Button, Text } from '@tarojs/components'
+import { AtButton } from 'taro-ui'
 import { add, minus, asyncAdd } from '../../store/actions/counter'
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
 
   return (
     <View className='index'>
+      <AtButton type='primary'>按钮文案</AtButton>
       <Button className='add_btn' onClick={_addCounter}>+</Button>
       <Button className='dec_btn' onClick={_decCounter}>-</Button>
       <Button className='dec_btn' onClick={_asyncAdd}>async</Button>
