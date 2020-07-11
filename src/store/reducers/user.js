@@ -1,3 +1,4 @@
+import { setToken } from '@/utils/auth'
 import initState from '../state/user'
 import { LOGIN, LOGIN_OUT } from '../constants/user'
 
@@ -8,6 +9,7 @@ export default function user(state = initState, action) {
         state.userName = action.payLoad.userName
         state.avatorUrl = action.payLoad.avatorUrl
         state.token = action.payLoad.token
+        setToken(action.payLoad.token)
       }
       return {
         ...state
