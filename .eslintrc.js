@@ -70,6 +70,7 @@ module.exports = {
     'no-self-assign': 2, // 不允许两边完全相同的赋值
     'no-self-compare': 2, // 不允许双方完全相同的比较
     'no-sequences': 2, // 不允许逗号运算符
+    "no-shadow": 0,
     'no-shadow-restricted-names': 2, // 禁止标识符隐藏受限制的名称
     'no-spaced-func': 2, // 函数调用间隔
     'no-sparse-arrays': 2, // 不允许稀疏数组 ps:[ "red",, "blue" ]
